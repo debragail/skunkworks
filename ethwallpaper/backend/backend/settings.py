@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'tp$e68tk96hl)sj(8z(&+on%j8aoj1189xx)ut%!yd2$p)gh0m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ethwallpaper.co', 'localhost']
 
