@@ -18,8 +18,8 @@ class IndexView(View):
         """Return html for main application page."""
 
         path = os.path.join(settings.BASE_DIR, '../frontend/build/index.html')
-        abspath = open(os.path.normpath(path), 'r')
-        return HttpResponse(content=abspath.read())
+        with open(os.path.normpath(path), 'r') as abspath:
+            return HttpResponse(content=abspath.read())
 
 
 class DetailsView(View):
@@ -34,8 +34,8 @@ class DetailsView(View):
             return Response(status=status.HTTP_404_NOT_FOUND)
 
         path = os.path.join(settings.BASE_DIR, '../frontend/build/index.html')
-        abspath = open(os.path.normpath(path), 'r')
-        html = abspath.read()
+        with open(os.path.normpath(path), 'r') as abspath:
+            html = abspath.read()
 
         html = html.replace(
             settings.DEFAULT_PREVIEW_IMAGE, '{}{}.{}'.format(settings.PREVIEW_URL, pk, wp.ext))
