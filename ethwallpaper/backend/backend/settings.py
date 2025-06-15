@@ -156,3 +156,4 @@ WALLPAPER_GEN_PATH = os.path.normpath(os.path.join(
 STATICFILES_DIRS = [
     ("wallpapers", WALLPAPERS_ABSOLUTE_PATH),
 ]
+SESSION_COOKIE_SECURE = True
